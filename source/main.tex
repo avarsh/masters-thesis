@@ -1,0 +1,48 @@
+\documentclass[10pt, a4paper]{report}
+
+\input{Preamble/preamble}
+\input{Preamble/commands}
+
+\title{The Geometry of Berkovich Analytic Spaces}
+\author{Aporva Varshney \\ Supervisor: Professor Johannes Nicaise \\ Second Marker: Professor Alexei Skorobogatov}
+\date{2022}
+\addbibresource{refs}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    The $p$-adic fields $\mathbb{Q}_p$ are integral in number theory and arithmetic geometry, and serve as a key example of a non-Archimedean field.
+    Unfortunately, a na{\"i}ve attempt to construct a theory of analytic geometry over $\mathbb{Q}_p$, paralleling the one over the complex numbers $\mathbb{C}$, fails to be useful. 
+    For example, a compact analytic manifold over $\mathbb{Q}_p$ decomposes as a disjoint union of open balls.
+    Over $\mathbb{C}$, algebraic objects such as curves given by the zero sets of polynomials may be studied as analytic objects by considering their analytifications.
+    Such analytifications reflect the geometry of the algebraic object, but an analog over $\mathbb{Q}_p$ using only the na{\"i}ve approach lacks this property due to the highly disconnected nature of compact manifolds.
+    
+    Berkovich spaces provide an alternative approach to non-Archimedean analytic geometry, giving a topologically well-behaved class of spaces.
+    They allow for analytifications of varieties over non-Archimedean fields, which preserve several important properties of the geometry of the variety.
+    This project aims to serve as an introduction to the theory of these spaces and how their geometric properties may be determined, illustrating the theory with several examples, including the case of elliptic curves.
+    Of particular importance is the notion of a skeleton of a Berkovich space, which is a subspace controlling the homotopy type of the space.
+    We study how skeleta may be found for both curves and higher dimensional spaces. 
+    In particular, we give a proof of a result showing how a Berkovich space may be recovered as a topological inverse limit of its skeleta.
+    To the best of our knowledge, all proofs of this result in the literature utilise more advanced techniques in algebraic geometry than those in this report; the proof given here can be considered more direct and explicit.
+\end{abstract}
+
+\tableofcontents
+
+\include{introduction}
+
+\include{analytic_spaces}
+
+\include{skeleta_of_curves}
+
+\include{birational_skeleta}
+
+\include{tate_curve_uniform}
+
+\include{conclusion}
+
+% Vancouver referencing
+\printbibliography
+
+\end{document}

@@ -1,0 +1,43 @@
+% Language setting
+\usepackage[english]{babel}
+
+\usepackage[a4paper]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{tikz-cd}
+\usepackage{pgfgantt}
+\usepackage[backend=bibtex,firstinits=true]{biblatex}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\setenumerate{itemsep=-2mm}
+\usepackage{parskip}
+\setlength{\parindent}{15pt}
+\usepackage{fancyhdr}
+
+\usepackage{cleveref}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\numberwithin{theorem}{section}
+
+\linespread{1.18}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[L]{\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}

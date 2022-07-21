@@ -1,0 +1,45 @@
+\chapter{Conclusion}
+
+A primary objective of this report was to give an overview of the theory of $k$-analytic spaces and explore methods to construct skeleta, which are a useful tool in analysing the geometry of such spaces.
+We break down the evaluation of the contributions of the project by chapter.
+
+We firstly gave an overview of $k$-analytic spaces.
+After reviewing the foundational theory, we were able to draw an explicit picture, giving an alternative derivation of Berkovich's classification of points using an approach originally stated in \parencite[Exercise 2.3.3.5]{temk}.
+We additionally gave a description of the partial ordering on the affine line; in particular, this involved extending the description given in \parencite{bakernotes} to the case of type IV points, which was left as an exercise.
+
+Next, we considered formal models for analytic spaces and the skeleta of curves over algebraically closed fields.
+After giving an overview of the theory of formal schemes, we proved \cref{lemma:affinecaseisaffinoid,separatedix,properisiso}, which detail the relation between the generic fiber of the formal completion and the analytification of the generic fiber.
+Following \parencite{bpr}, we developed the theory of semistable vertex sets and sketched the correspondence with semistable formal models of a curve.
+We illustrated this correspondence concretely by considering the projective line.
+
+Next, we gave a presentation of the construction of a skeleton for analytic spaces of arbitrary dimension, using snc models.
+The main contribution of this section was providing a proof of \cref{thm:homeomorphism}.
+The key aspect in showing this result was to prove that for any two distinct points $x$ and $y$ on the analytic space, there exists an snc model such that $x$ and $y$ retract to distinct points on the associated skeleton.
+This was shown in \cref{injectivity}, which applied to arbitrary dimension but required resolution of singularities.
+Hence, in the case of curves, we also provided a more direct argument utilising only blow-ups with centers given by closed points.
+
+Finally, we exemplified the theory by applying these techniques to the analytification of an elliptic curve.
+
+Berkovich spaces are used prominently in various areas of mathematics.
+One particularly exciting application is to mirror symmetry, which is a geometric duality with roots in string theory.
+The SYZ conjecture is an attempt to provide mathematical foundations for mirror symmetry, which is originally a physical phenomenon, and in \parencite{kontsevich}, the theory of Berkovich spaces is a central in finding a non-Archimedean analog for the conjecture.
+The notion of the skeleton is then a vital component of the conjecture, and in particular, the conjecture is exemplified through the Tate elliptic curve \parencite{vietnam}.
+Due to time constraints, we were not able to provide an exposition of this, but it is indubitable that a discussion of such applications would have provided strong motivations for the theory.
+
+Throughout the report, proofs were occasionally omitted when it was deemed that they would not be beneficial in our goals of developing intuition and an understanding of the theory.
+In certain cases, we endeavoured to replace the proofs with examples, as in the case of \cref{semistablecorrespondence} and \cref{blowupintersectionskeleton}. 
+
+A possible extension to the work presented here would be to investigate the results in \cref{chapter4} in the context where the base field is algebraically closed.
+One effect of the discretely valued assumption was that it simplified certain aspects, such as by ensuring that the schemes we were considering were locally Noetherian.
+In particular, the notion of an snc divisor is ill-defined and we must instead work with semistable models.
+The construction of monomial and divisorial points, as found in \parencite{MN}, was also presented in the discretely valued case and would first need to be extended to the algebraically closed case.
+We must be careful to consider blow-ups with centers given by finitely generated ideals;
+we conjecture that the proof of \cref{injectivity} may be extended without too much difficulty, but the analogue of \cref{injectivityforcurves} may be more challenging in this context.
+
+\paragraph{Ethical Considerations}
+
+The ethical concerns regarding this project are negligible, which is highly theoretical in nature. 
+One aspect which may be considered is that of the role of areas of mathematics such as number theory in military applications, primarily as a result of its use in cryptography. 
+While algebraic geometry and the theory of Berkovich spaces has some uses in the fields of algebraic number theory and arithmetic geometry, the contents of this project are sufficiently detached from any potential applications in real world scenarios for this to be a reasonable concern. 
+Additionally, the project does not involve the collection and processing of user data, and does not involve human or animal participants.
+The project has not encountered legal or moral issues.

@@ -1,0 +1,83 @@
+
+\chapter{Introduction}
+
+\section{Motivation}
+
+A field $k$ is said to be non-Archimedean with respect to an absolute value  ${\absval: k \to \RR}$ if the ultrametric triangle inequality is satisfied:
+\[
+|f + g| \leq \max\{|f|, |g|\} \; \; \; \; \; \forall f, g \in k.
+\]
+In number theory, a prominent example of such fields are the $p$-adics $\QQ_p$ equipped with the $p$-adic absolute value, while in geometry, one is often interested in working over the field of Laurent series $F((t))$ over a field $F$, equipped with the $t$-adic absolute value.
+
+Over $\CC$, an important class of geometric objects comes in the form of Riemann surfaces, which are compact analytic manifolds of complex dimension $1$. 
+More generally, a nonsingular variety over $\CC$ admits an analytification, which is a complex analytic space; Riemann surfaces then correspond to analytifications of curves. 
+Furthermore, the analytification of a variety may be studied using \textit{transcendental methods} (see \parencite[Appendix B]{hartshorne}).
+A suitable GAGA principle then indicates that the geometry of the analytification reflects the geometry of the original variety.
+
+In order to develop a similar theory over non-Archimedean fields, it is natural to consider compact analytic manifolds, but here, a theorem of Serre shows that such spaces are poorly behaved when the base field is non-Archimedean and locally compact - as is the case for the fields $\QQ_p$ and $\mathbb{F}_q((t))$.
+
+\begin{theorem}\parencite[Appendix 2]{serre}
+    Let $X$ be a non-empty, compact analytic manifold over a locally compact and non-Archimedean field. Then $X$ decomposes as a disjoint union of a finite number of balls. If there are two such decompositions into $n$ and $m$ balls respectively, then $n \equiv m \mod q$, where $q$ is the size of the residue field.
+\end{theorem}
+
+In particular, this completely determines the structure of any such manifold and motivates the need for an improved notion of non-Archimedean analytic spaces. 
+
+An important milestone in the development of a well-behaved non-Archimedean analytic theory came through Tate's rigid analytic spaces in the 1960s. 
+These spaces, developed using rings of convergent power series as opposed to the polynomial rings used in algebraic geometry, were much better behaved, admitting, for example, a suitable GAGA principle. 
+An important variation, and the one which will be principally studied here, was in the form of Berkovich's $k$-analytic spaces, developed in the late 1980s.
+An advantage offered by Berkovich spaces was that it became possible to work directly with the topology of the space itself, as opposed to the `Grothendieck topology' used in rigid analytic geometry, a feat made possible by effectively adding additional points to rigid spaces.
+Presently, Berkovich spaces find a plethora of uses, including non-Archimedean analogues for potential theory \parencite{potdynams} and mirror symmetry \parencite{kontsevich, vietnam}.
+
+\section{Report Structure}
+
+In this report, we explore the theory of Berkovich spaces, focusing on techniques to visualise and determine the geometry of such spaces. 
+We assume some knowledge of algebraic geometry, category theory and some elementary results in non-Archimedean analysis. 
+In particular, it is crucial to use the theory of schemes as opposed to the classical theory of varieties.
+
+In the first core chapter, we review the construction of Berkovich spaces.
+Although there are some parallels here with the construction of schemes, some more care is needed in comparison with the approach taken in algebraic geometry, since we must additionally capture the analytic aspects of the rings that we are working with.
+The primary example considered to illustrate the theory is that of the analytic affine line $\affline$, for which we are able to derive an explicit picture.
+We also describe the construction of the analytification functor, assigning to a $k$-variety $X$ the Berkovich space $\anl{X}$.
+
+We then focus our attention towards $k$-analytic curves.
+We give an overview of formal schemes and formal models.
+In general, a model for an analytic space can be considered to be a space, such as a scheme or a formal scheme, which captures the geometry of the analytic space. 
+Then, we move on to the notion of a skeleton, which is a fundamental concept in the theory of Berkovich spaces.
+If $X$ is a $k$-analytic space, then a skeleton $\Sigma$ is a closed subset of $X$ admitting a strong deformation retraction $X \to \Sigma$.
+In particular, the homotopy type of $X$ is controlled by the skeleton.
+We see how skeleta of curves are closely linked to the classical theory of semistable formal models, using the analytic projective line to illustrate the correspondence.
+
+Equipped with the ideas and imagery of curves, we then generalise the notion of a skeleton to higher dimensional analytic spaces.
+For each proper variety $X$ over $k$, we consider the class of schemes which model the analytic space $\anl{X}$, known as snc models.
+We see how an snc model $\model$ gives rise to a skeleton $\sk{\model} \subset \anl{X}$, and furthermore, provide a proof of \cref{thm:homeomorphism}, which states that there is a homeomorphism
+\[
+    \anl{X} \cong \varprojlim \sk{\model}
+\]
+as $\model$ ranges over the snc models of $\anl{X}$.
+Informally, the topology of $\anl{X}$ is determined by its snc models.
+
+In the final chapter, we consider the case of elliptic curves, explaining how non-Archimedean uniformization theory may be used to construct the analytic space associated to an elliptic curve with multiplicative reduction.
+We apply the results from previous chapters to compute skeleta for this space.
+
+\subsection{Contributions}
+
+The contributions of the report are summarised as follows.
+\begin{itemize}
+    \item Various aspects of the theory originally spread across various textbooks and papers are organised into one report.
+    In particular, there is no standard textbook for non-Archimedean geometry, so information has been consolidated from a variety of sources.
+    \item Examples in addition to what is presented in the sources have been computed in order to better illustrate the theory.
+    \item Efforts have been made to clarify details and arguments which were omitted in the original sources or left as exercises to the reader.
+    \item A proof is given of the result labelled in the following chapters as \cref{thm:homeomorphism}. 
+    To the best of our knowledge, proofs in the literature of this result require more advanced techniques in algebraic geometry  (see \parencite{bfj}).
+    We present two proofs for this result which essentially depend only on standard results on blow-ups of schemes, hence providing a more direct and explicit argument.
+        \begin{itemize}
+            \item The first proof works for arbitrary dimensions, but requires resolution of singularities, which is a powerful result in birational geometry.
+            \item The second proof does not depend on resolution of singularities, but works only in the case of curves.
+        \end{itemize}
+\end{itemize}
+
+\paragraph{Notation and Conventions}
+
+Throughout the report, $k$ will denote a complete non-Archimedean field with a non-trivial absolute value $|\cdot|$.
+Its valuation ring will be denoted by $R$ and the residue field by $\tilde{k}$. 
+The valuation group of any valued field $(K, |\cdot|_K)$ is denoted by $|K^\times| = \{ |f|_{K} \; | \; f \in K^{\times} \} \subset \mathbb{R}$.
